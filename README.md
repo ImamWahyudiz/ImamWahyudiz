@@ -67,10 +67,10 @@ class ImamWahyudi:
 
 ## 📊 GitHub Stats
 
-<div align="center">
+<!-- <div align="center">
   &nbsp;
   <img height="170em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ImamWahyudiz&layout=compact&langs_count=7&theme=tokyonight&hide_border=true&bg_color=0D1117" />
-</div>
+</div> -->
 
 <div align="center">
   <img width="65%" src="https://github-readme-streak-stats.herokuapp.com/?user=ImamWahyudiz&theme=tokyonight&hide_border=true&background=0D1117&ring=6AD3F7&fire=FF6B6B&currStreakLabel=6AD3F7&sideLabels=6AD3F7" />
