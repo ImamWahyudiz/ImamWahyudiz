@@ -68,39 +68,12 @@ class ImamWahyudi:
 ## 📊 GitHub Stats
 
 <div align="center">
-  <img height="170em" src="https://github-readme-stats.vercel.app/api?username=ImamWahyudiz&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true&bg_color=0D1117" />
   &nbsp;
   <img height="170em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ImamWahyudiz&layout=compact&langs_count=7&theme=tokyonight&hide_border=true&bg_color=0D1117" />
 </div>
 
 <div align="center">
   <img width="65%" src="https://github-readme-streak-stats.herokuapp.com/?user=ImamWahyudiz&theme=tokyonight&hide_border=true&background=0D1117&ring=6AD3F7&fire=FF6B6B&currStreakLabel=6AD3F7&sideLabels=6AD3F7" />
-</div>
-
----
-
-## 🌟 Featured Projects
-
-<div align="center">
-
-<a href="https://github.com/ImamWahyudiz/Belajar-struktur-data">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=ImamWahyudiz&repo=Belajar-struktur-data&theme=tokyonight&hide_border=true&bg_color=0D1117" />
-</a>
-&nbsp;
-<a href="https://github.com/ImamWahyudiz/Box-Security-System">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=ImamWahyudiz&repo=Box-Security-System&theme=tokyonight&hide_border=true&bg_color=0D1117" />
-</a>
-
-<br/><br/>
-
-<a href="https://github.com/ImamWahyudiz/Academic-Affiliation-Checker">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=ImamWahyudiz&repo=Academic-Affiliation-Checker&theme=tokyonight&hide_border=true&bg_color=0D1117" />
-</a>
-&nbsp;
-<a href="https://github.com/ImamWahyudiz/Belajar_komputasi_paralel">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=ImamWahyudiz&repo=Belajar_komputasi_paralel&theme=tokyonight&hide_border=true&bg_color=0D1117" />
-</a>
-
 </div>
 
 ---
