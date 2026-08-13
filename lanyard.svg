@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 650" width="400" height="650">
+  <defs>
+    <filter id="neo-shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="12" dy="12" stdDeviation="0" flood-color="#000000" flood-opacity="1"/>
+    </filter>
+    <clipPath id="avatar-clip">
+      <rect x="100" y="150" width="200" height="200" rx="0" />
+    </clipPath>
+  </defs>
+  <style>
+    .svg-wrapper {
+      perspective: 1500px;
+      width: 100%;
+      height: 100%;
+    }
+
+    .lanyard-container {
+      transform-origin: 50% -50px;
+      animation: float 4s ease-in-out infinite;
+      transform-style: preserve-3d;
+    }
+    
+    .card {
+      transform-style: preserve-3d;
+      transform-origin: 200px 310px;
+    }
+
+    .card-front, .card-back {
+      backface-visibility: hidden;
+      transform-style: preserve-3d;
+      cursor: pointer;
+    }
+
+    .card-back {
+      transform: rotateY(180deg);
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotateZ(3deg); }
+      50% { transform: translateY(-15px) rotateZ(-2deg); }
+    }
+    
+    text {
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: 900;
+    }
+  </style>
+
+  <g class="svg-wrapper">
+    <g class="lanyard-container">
+      <!-- Lanyard String -->
+      <path d="M140, -50 L180, 50 L220, 50 L260, -50" stroke="#000" stroke-width="14" fill="none" />
+      <path d="M140, -50 L180, 50 L220, 50 L260, -50" stroke="#FFDF00" stroke-width="8" stroke-dasharray="10 5" fill="none" />
+      
+      <!-- Clip/Hook -->
+      <rect x="185" y="45" width="30" height="25" fill="#aaa" stroke="#000" stroke-width="4" />
+      <path d="M190, 70 L195, 90 L205, 90 L210, 70 Z" fill="#ccc" stroke="#000" stroke-width="3" />
+      <circle cx="200" cy="95" r="5" fill="#000" />
+
+      <!-- The Card Group -->
+      <g class="card">
+        <!-- Click Animations -->
+        <animateTransform id="flipToBack" attributeName="transform" type="rotate" from="0 200 310" to="180 200 310" begin="click-front.click" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" />
+        <animateTransform id="flipToFront" attributeName="transform" type="rotate" from="180 200 310" to="0 200 310" begin="click-back.click" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" />
+
+        <!-- CARD FRONT -->
+        <g class="card-front">
+          <rect x="50" y="70" width="300" height="480" fill="#FFDF00" stroke="#000" stroke-width="6" filter="url(#neo-shadow)" />
+          
+          <!-- Hole Punch -->
+          <rect x="165" y="85" width="70" height="12" fill="#fff" stroke="#000" stroke-width="3" />
+          
+          <!-- Profile Grid/Picture area -->
+          <rect x="100" y="150" width="200" height="200" fill="#fff" stroke="#000" stroke-width="6" />
+          <image href="https://github.com/ImamWahyudiz.png" x="100" y="150" width="200" height="200" clip-path="url(#avatar-clip)" />
+          
+          <!-- Top Label -->
+          <rect x="50" y="105" width="300" height="30" fill="#000" />
+          <text x="200" y="125" font-size="16" fill="#FFDF00" text-anchor="middle" letter-spacing="2">OFFICIAL GITHUB ID</text>
+
+          <!-- Name & Role -->
+          <rect x="60" y="380" width="280" height="60" fill="#fff" stroke="#000" stroke-width="4" />
+          <text x="200" y="418" font-size="22" fill="#000" text-anchor="middle" letter-spacing="1">IMAM WAHYUDI</text>
+          
+          <rect x="60" y="450" width="280" height="40" fill="#FF69B4" stroke="#000" stroke-width="4" />
+          <text x="200" y="475" font-size="16" fill="#000" text-anchor="middle" letter-spacing="2">SOFTWARE DEV</text>
+          
+          <text x="70" y="525" font-size="14" fill="#000" text-anchor="start">ID: @ImamWahyudiz</text>
+          
+          <!-- Click target overlay -->
+          <rect id="click-front" x="50" y="70" width="300" height="480" fill="transparent" />
+        </g>
+
+        <!-- CARD BACK -->
+        <g class="card-back">
+          <rect x="50" y="70" width="300" height="480" fill="#40E0D0" stroke="#000" stroke-width="6" filter="url(#neo-shadow)" />
+          
+          <!-- Hole Punch -->
+          <rect x="165" y="85" width="70" height="12" fill="#fff" stroke="#000" stroke-width="3" />
+          
+          <!-- Details -->
+          <rect x="50" y="105" width="300" height="30" fill="#000" />
+          <text x="200" y="125" font-size="16" fill="#40E0D0" text-anchor="middle" letter-spacing="2">GITHUB STATS</text>
+          
+          <rect x="70" y="160" width="260" height="150" fill="#fff" stroke="#000" stroke-width="4" />
+          <text x="85" y="195" font-size="16" fill="#000">🔥 Full Stack Dev</text>
+          <text x="85" y="235" font-size="16" fill="#000">🚀 IoT Explorer</text>
+          <text x="85" y="275" font-size="16" fill="#000">⚡ Code Architect</text>
+          
+          <rect x="70" y="340" width="260" height="120" fill="#FFDF00" stroke="#000" stroke-width="4" />
+          <text x="200" y="375" font-size="20" fill="#000" text-anchor="middle">CONTACT</text>
+          <text x="200" y="405" font-size="14" fill="#000" text-anchor="middle">github.com/</text>
+          <text x="200" y="425" font-size="16" fill="#000" text-anchor="middle">ImamWahyudiz</text>
+
+          <text x="200" y="525" font-size="14" fill="#000" text-anchor="middle">(Click to flip back)</text>
+          
+          <!-- Barcode style decoration -->
+          <rect x="70" y="475" width="260" height="20" fill="#000" />
+          <rect x="80" y="475" width="10" height="20" fill="#fff" />
+          <rect x="100" y="475" width="5" height="20" fill="#fff" />
+          <rect x="120" y="475" width="15" height="20" fill="#fff" />
+          <rect x="150" y="475" width="10" height="20" fill="#fff" />
+          <rect x="180" y="475" width="20" height="20" fill="#fff" />
+          <rect x="220" y="475" width="10" height="20" fill="#fff" />
+          <rect x="250" y="475" width="5" height="20" fill="#fff" />
+          <rect x="270" y="475" width="15" height="20" fill="#fff" />
+          
+          <!-- Click target overlay -->
+          <rect id="click-back" x="50" y="70" width="300" height="480" fill="transparent" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
