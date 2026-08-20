@@ -5,13 +5,6 @@ export function renderNavbar() {
   return `
     <nav class="fixed top-0 left-0 right-0 z-50 px-4 sm:px-8 py-3.5 backdrop-blur-xl bg-slate-950/70 border-b border-cyan-500/20 transition-all duration-300">
       <div class="max-w-7xl mx-auto flex items-center justify-between">
-        <!-- Logo -->
-        <a href="#hero" class="flex items-center gap-3 group" onclick="window.handleNavClick(event, 'hero')">
-          <div class="w-9 h-9 rounded-lg bg-gradient-to-tr from-cyan-500 to-purple-600 p-[1.5px] shadow-[0_0_15px_rgba(0,242,254,0.4)] group-hover:shadow-[0_0_22px_rgba(0,242,254,0.8)] transition-all">
-            <div class="w-full h-full bg-slate-950 rounded-[7px] flex items-center justify-center font-mono font-bold text-cyan-400 text-sm">
-              IW
-            </div>
-          </div>
           <div class="flex flex-col">
             <span class="font-bold text-slate-100 tracking-wide font-mono text-sm sm:text-base group-hover:text-cyan-400 transition-colors">
               ${profileData.username}
