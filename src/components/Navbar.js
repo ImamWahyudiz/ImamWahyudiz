@@ -10,7 +10,7 @@ export function renderNavbar() {
               ${profileData.username}
             </span>
             <span class="text-[10px] text-cyan-400/80 font-mono flex items-center gap-1.5">
-              <span class="status-dot"></span> DEV // ONLINE
+              <span class="status-dot"></span> VIBESCODER // ONLINE
             </span>
           </div>
         </a>
