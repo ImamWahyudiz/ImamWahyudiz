@@ -4,7 +4,8 @@ import { playSound, toggleSound, isSoundEnabled } from '../utils/audio.js';
 export function renderNavbar() {
   return `
     <nav class="fixed top-0 left-0 right-0 z-50 px-4 sm:px-8 py-3.5 backdrop-blur-xl bg-slate-950/70 border-b border-cyan-500/20 transition-all duration-300">
-      <div class="max-w-7xl mx-auto flex items-center justify-between">
+        <!-- Logo / Username Link -->
+        <a href="#about" class="flex items-center gap-3 group" onclick="window.handleNavClick(event, 'about')">
           <div class="flex flex-col">
             <span class="font-bold text-slate-100 tracking-wide font-mono text-sm sm:text-base group-hover:text-cyan-400 transition-colors">
               ${profileData.username}

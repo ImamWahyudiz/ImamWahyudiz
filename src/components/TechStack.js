@@ -4,7 +4,11 @@ import { getTechVectorIcon } from '../utils/techIcons.js';
 
 let currentCategory = 'all';
 let isExpanded = false;
-const INITIAL_LIMIT = 8; // 2 baris (4 kolom x 2 baris = 8 item)
+
+function getInitialLimit() {
+  // Mobile (< 640px) max 3, Desktop (>= 640px) max 8 (2 baris x 4 kolom)
+  return window.innerWidth < 640 ? 3 : 8;
+}
 
 export function renderTechStack() {
   return `
@@ -42,7 +46,7 @@ export function renderTechStack() {
         </button>
       </div>
 
-      <!-- Tech Grid (Default 2 baris / 8 item) -->
+      <!-- Tech Grid -->
       <div id="tech-grid-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
         ${renderTechCards('all', false)}
       </div>
@@ -62,13 +66,13 @@ export function renderTechStack() {
 }
 
 function renderTechCards(category, expanded = false) {
-  const filtered = category === 'all' 
-    ? profileData.techStack 
+  const filtered = category === 'all'
+    ? profileData.techStack
     : profileData.techStack.filter(item => item.category === category);
 
-  // Jika tidak expanded dan filtered lebih dari 8, potong jadi 8 (2 baris)
-  const displayItems = (!expanded && filtered.length > INITIAL_LIMIT)
-    ? filtered.slice(0, INITIAL_LIMIT)
+  const limit = getInitialLimit();
+  const displayItems = (!expanded && filtered.length > limit)
+    ? filtered.slice(0, limit)
     : filtered;
 
   return displayItems.map(item => `
@@ -115,17 +119,19 @@ export function setupTechStackEvents() {
     if (!container) return;
     container.innerHTML = renderTechCards(currentCategory, isExpanded);
 
-    const filteredCount = currentCategory === 'all' 
-      ? profileData.techStack.length 
+    const filteredCount = currentCategory === 'all'
+      ? profileData.techStack.length
       : profileData.techStack.filter(item => item.category === currentCategory).length;
 
+    const limit = getInitialLimit();
+
     if (toggleBtn && toggleText && toggleIcon) {
-      if (filteredCount <= INITIAL_LIMIT) {
+      if (filteredCount <= limit) {
         toggleBtn.classList.add('hidden');
       } else {
         toggleBtn.classList.remove('hidden');
         if (isExpanded) {
-          toggleText.textContent = "SHOW LESS (COLLAPSE TO 2 ROWS)";
+          toggleText.textContent = "SHOW LESS (COLLAPSE)";
           toggleIcon.style.transform = "rotate(180deg)";
         } else {
           toggleText.textContent = `VIEW ALL TECHNOLOGIES (${filteredCount})`;
@@ -157,4 +163,9 @@ export function setupTechStackEvents() {
       updateGrid();
     });
   }
+
+  // Handle window resize dynamically
+  window.addEventListener('resize', () => {
+    updateGrid();
+  });
 }
