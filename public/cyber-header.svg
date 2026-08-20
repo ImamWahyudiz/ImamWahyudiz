@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 220" width="100%" height="220">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700;800&amp;family=Orbitron:wght@700;900&amp;display=swap');
+
+      .font-orbitron {
+        font-family: 'Orbitron', -apple-system, sans-serif;
+      }
+      .font-mono {
+        font-family: 'JetBrains Mono', monospace;
+      }
+
+      .pulse-dot {
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.4; transform: scale(0.85); }
+      }
+
+      .scan-line {
+        animation: scan 4s linear infinite;
+      }
+
+      @keyframes scan {
+        0% { transform: translateY(-50px); opacity: 0; }
+        50% { opacity: 0.8; }
+        100% { transform: translateY(220px); opacity: 0; }
+      }
+
+      .cyan-glow {
+        filter: drop-shadow(0 0 12px rgba(0, 242, 254, 0.6));
+      }
+    </style>
+
+    <!-- Gradients -->
+    <linearGradient id="headerBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060911" />
+      <stop offset="50%" stop-color="#0c1222" />
+      <stop offset="100%" stop-color="#080d1a" />
+    </linearGradient>
+
+    <linearGradient id="neonTitle" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="50%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#a855f7" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#00f2fe" stop-opacity="0.8" />
+    </linearGradient>
+
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(0, 242, 254, 0.05)" stroke-width="1" />
+    </pattern>
+  </defs>
+
+  <!-- Banner Background -->
+  <rect x="0" y="0" width="900" height="220" rx="16" fill="url(#headerBg)" />
+  
+  <!-- Cyber Grid Pattern -->
+  <rect x="0" y="0" width="900" height="220" rx="16" fill="url(#grid)" />
+
+  <!-- Ambient Glow Cones -->
+  <circle cx="100" cy="50" r="120" fill="#00f2fe" opacity="0.08" filter="blur(40px)" />
+  <circle cx="800" cy="170" r="140" fill="#a855f7" opacity="0.09" filter="blur(50px)" />
+
+  <!-- Outer Border Frame -->
+  <rect x="2" y="2" width="896" height="216" rx="15" fill="none" stroke="url(#borderGrad)" stroke-width="1.5" />
+
+  <!-- Corner HUD Accents -->
+  <path d="M 12 35 L 12 12 L 35 12" fill="none" stroke="#00f2fe" stroke-width="2.5" />
+  <path d="M 888 35 L 888 12 L 865 12" fill="none" stroke="#a855f7" stroke-width="2.5" />
+  <path d="M 12 185 L 12 208 L 35 208" fill="none" stroke="#00f2fe" stroke-width="2.5" />
+  <path d="M 888 185 L 888 208 L 865 208" fill="none" stroke="#a855f7" stroke-width="2.5" />
+
+  <!-- Top System Badge Bar -->
+  <g transform="translate(45, 34)" class="font-mono">
+    <!-- Status Pill -->
+    <rect x="0" y="0" width="180" height="24" rx="12" fill="#0b1329" stroke="#00f2fe" stroke-width="1" />
+    <circle cx="14" cy="12" r="4" fill="#10b981" class="pulse-dot" />
+    <text x="30" y="16" font-size="10" font-weight="700" fill="#00f2fe" letter-spacing="1">SYSTEM // ONLINE</text>
+
+    <!-- Version Pill -->
+    <rect x="190" y="0" width="140" height="24" rx="12" fill="#0b1329" stroke="#334155" stroke-width="1" />
+    <text x="260" y="16" text-anchor="middle" font-size="10" font-weight="700" fill="#94a3b8">v2.4.0-CORE</text>
+
+    <!-- Handle on right -->
+    <text x="810" y="16" text-anchor="end" font-size="11" font-weight="700" fill="#a855f7" letter-spacing="1">@ImamWahyudiz</text>
+  </g>
+
+  <!-- Main Hero Title -->
+  <text x="45" y="112" font-size="44" font-weight="900" fill="url(#neonTitle)" letter-spacing="2" class="font-orbitron cyan-glow">
+    IMAM WAHYUDI
+  </text>
+
+  <!-- Subtitle / Role Stream -->
+  <g transform="translate(45, 148)" class="font-mono">
+    <text x="0" y="0" font-size="15" font-weight="700" fill="#f1f5f9">
+      Full Stack Web Architecture <tspan fill="#00f2fe">|</tspan> Embedded IoT (ESP32) <tspan fill="#a855f7">|</tspan> Parallel Computing
+    </text>
+  </g>
+
+  <!-- Bottom Badges / Tech Highlights -->
+  <g transform="translate(45, 175)" class="font-mono" font-size="11">
+    <rect x="0" y="0" width="110" height="22" rx="4" fill="#0f172a" stroke="#00f2fe" stroke-width="1" />
+    <text x="55" y="15" text-anchor="middle" fill="#00f2fe" font-weight="700">⚡ REACT</text>
+
+    <rect x="120" y="0" width="120" height="22" rx="4" fill="#0f172a" stroke="#f43f5e" stroke-width="1" />
+    <text x="180" y="15" text-anchor="middle" fill="#f43f5e" font-weight="700">🔴 LARAVEL</text>
+
+    <rect x="250" y="0" width="120" height="22" rx="4" fill="#0f172a" stroke="#10b981" stroke-width="1" />
+    <text x="310" y="15" text-anchor="middle" fill="#10b981" font-weight="700">📡 ESP32 IOT</text>
+
+    <rect x="380" y="0" width="130" height="22" rx="4" fill="#0f172a" stroke="#a855f7" stroke-width="1" />
+    <text x="445" y="15" text-anchor="middle" fill="#d8b4fe" font-weight="700">🧠 ALGORITHMS</text>
+  </g>
+</svg>

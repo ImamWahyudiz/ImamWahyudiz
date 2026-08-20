@@ -1,0 +1,249 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 900 370" width="100%" height="370">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700;800&amp;family=Orbitron:wght@700;900&amp;display=swap');
+
+      text {
+        font-family: 'JetBrains Mono', monospace;
+      }
+      .font-orbitron {
+        font-family: 'Orbitron', 'JetBrains Mono', sans-serif;
+      }
+
+      .card-glow {
+        filter: drop-shadow(0 0 10px rgba(0, 242, 254, 0.15));
+      }
+      .cyan-glow {
+        filter: drop-shadow(0 0 8px rgba(0, 242, 254, 0.4));
+      }
+    </style>
+
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070b14" />
+      <stop offset="50%" stop-color="#0a101f" />
+      <stop offset="100%" stop-color="#070b14" />
+    </linearGradient>
+
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+  </defs>
+
+  <!-- Container Box -->
+  <rect x="2" y="2" width="896" height="366" rx="16" fill="url(#bgGrad)" stroke="#1e293b" stroke-width="1.5" />
+
+  <!-- Section Header -->
+  <g transform="translate(35, 36)">
+    <text x="0" y="0" font-size="16" font-weight="900" fill="#00f2fe" letter-spacing="2" class="font-orbitron">02 // ARSENAL &amp; TECH SPECS</text>
+    <text x="350" y="0" font-size="12" fill="#64748b">Verified core capabilities synced with @ImamWahyudiz GitHub</text>
+  </g>
+  <line x1="35" y1="52" x2="865" y2="52" stroke="#1e293b" stroke-width="1" />
+
+  <!-- ================= 4 COLUMNS ================= -->
+
+  <!-- COLUMN 1: LANGUAGES -->
+  <g transform="translate(35, 75)" class="card-glow">
+    <rect x="0" y="0" width="195" height="265" rx="12" fill="#0b1329" stroke="#38bdf8" stroke-width="1.2" />
+    
+    <!-- Header -->
+    <path d="M 0 12 Q 0 0 12 0 L 183 0 Q 195 0 195 12 L 195 38 L 0 38 Z" fill="#0f172a" />
+    <line x1="0" y1="38" x2="195" y2="38" stroke="#38bdf8" stroke-width="1" />
+    
+    <!-- Code Bracket Icon -->
+    <path d="M 16 19 L 10 24 L 16 29 M 22 19 L 28 24 L 22 29" fill="none" stroke="#38bdf8" stroke-width="2" />
+    <text x="36" y="25" font-size="12" font-weight="800" fill="#38bdf8">LANGUAGES</text>
+
+    <!-- Items with Real Vectors -->
+    <!-- JavaScript -->
+    <g transform="translate(14, 52)">
+      <rect x="0" y="0" width="14" height="14" fill="#f7df1e" rx="2" />
+      <text x="7" y="11" font-size="9" font-weight="900" fill="#000" text-anchor="middle">JS</text>
+      <text x="22" y="12" font-size="11" font-weight="700" fill="#f1f5f9">JavaScript</text>
+      <text x="165" y="12" font-size="9" fill="#f7df1e" text-anchor="end">Client &amp; Odoo</text>
+    </g>
+
+    <!-- Python -->
+    <g transform="translate(14, 92)">
+      <g transform="translate(0, 2) scale(0.55)">
+        <path d="M9.9 0C4.5 0 4.8 2.3 4.8 2.3l.01 2.4h5.2V5.5H3.1S0 5.1 0 10.4c0 5.4 2.7 5.2 2.7 5.2h1.6V13.3s-.1-2.7 2.7-2.7h5.1s2.6.1 2.6-2.5V2.6S15.3 0 9.9 0zm-2.7 1.6c.5 0 .9.4.9.9s-.4.9-.9.9-.9-.4-.9-.9.4-.9.9-.9z" fill="#38bdf8" />
+        <path d="M10.1 20c5.4 0 5.1-2.3 5.1-2.3l-.01-2.4H10v-.8h6.9s3.1.4 3.1-4.9c0-5.4-2.7-5.2-2.7-5.2h-1.6v2.3s.1 2.7-2.7 2.7H7.9s-2.6-.1-2.6 2.5v4.8s-.6 2.6 4.8 2.6zm2.7-1.6c-.5 0-.9-.4-.9-.9s.4-.9.9-.9.9.4.9.9-.4.9-.9.9z" fill="#fde047" />
+      </g>
+      <text x="22" y="12" font-size="11" font-weight="700" fill="#f1f5f9">Python</text>
+      <text x="165" y="12" font-size="9" fill="#38bdf8" text-anchor="end">ML Drift</text>
+    </g>
+
+    <!-- C / C++ -->
+    <g transform="translate(14, 132)">
+      <circle cx="7" cy="7" r="7" fill="#0284c7" />
+      <text x="7" y="10.5" font-size="8" font-weight="900" fill="#fff" text-anchor="middle">C</text>
+      <text x="22" y="12" font-size="11" font-weight="700" fill="#f1f5f9">C / C++</text>
+      <text x="165" y="12" font-size="9" fill="#0284c7" text-anchor="end">Parallel/BAN-PT</text>
+    </g>
+
+    <!-- Java -->
+    <g transform="translate(14, 172)">
+      <path d="M 4 12 Q 7 8 10 12 Q 13 8 10 3" fill="none" stroke="#f97316" stroke-width="1.8" />
+      <text x="22" y="12" font-size="11" font-weight="700" fill="#f1f5f9">Java</text>
+      <text x="165" y="12" font-size="9" fill="#f97316" text-anchor="end">Data Struct</text>
+    </g>
+
+    <!-- PHP -->
+    <g transform="translate(14, 212)">
+      <ellipse cx="7" cy="7" rx="7" ry="5" fill="#818cf8" />
+      <text x="7" y="9.5" font-size="6" font-weight="900" fill="#fff" text-anchor="middle">PHP</text>
+      <text x="22" y="12" font-size="11" font-weight="700" fill="#f1f5f9">PHP</text>
+      <text x="165" y="12" font-size="9" fill="#818cf8" text-anchor="end">Academic MVP</text>
+    </g>
+  </g>
+
+  <!-- COLUMN 2: WEB & CLIENT-SIDE ARCHITECTURE -->
+  <g transform="translate(245, 75)" class="card-glow">
+    <rect x="0" y="0" width="195" height="265" rx="12" fill="#0b1329" stroke="#00f2fe" stroke-width="1.2" />
+    
+    <path d="M 0 12 Q 0 0 12 0 L 183 0 Q 195 0 195 12 L 195 38 L 0 38 Z" fill="#0f172a" />
+    <line x1="0" y1="38" x2="195" y2="38" stroke="#00f2fe" stroke-width="1" />
+    
+    <!-- Layers Icon -->
+    <path d="M 12 16 L 20 12 L 28 16 L 20 20 Z M 12 21 L 20 25 L 28 21 M 12 26 L 20 30 L 28 26" fill="none" stroke="#00f2fe" stroke-width="1.5" />
+    <text x="36" y="25" font-size="12" font-weight="800" fill="#00f2fe">WEB &amp; CLIENT</text>
+
+    <!-- Vue.js -->
+    <g transform="translate(14, 52)">
+      <path d="M 0 2 L 7 14 L 14 2 L 10.5 2 L 7 8 L 3.5 2 Z" fill="#42b883" />
+      <path d="M 3.5 2 L 7 8 L 10.5 2 Z" fill="#35495e" />
+      <text x="22" y="12" font-size="11" font-weight="700" fill="#f1f5f9">Vue.js</text>
+      <text x="165" y="12" font-size="9" fill="#42b883" text-anchor="end">Cherdocky</text>
+    </g>
+
+    <!-- Node.js -->
+    <g transform="translate(14, 92)">
+      <path d="M 7 1 L 13 4.5 L 13 11.5 L 7 15 L 1 11.5 L 1 4.5 Z" fill="#22c55e" />
+      <text x="22" y="12" font-size="11" font-weight="700" fill="#f1f5f9">Node.js</text>
+      <text x="165" y="12" font-size="9" fill="#22c55e" text-anchor="end">Server &amp; CLI</text>
+    </g>
+
+    <!-- Tailwind CSS -->
+    <g transform="translate(14, 132)">
+      <path d="M 2 8 Q 5 4 8 7 Q 11 10 14 6 Q 11 12 8 9 Q 5 6 2 8 Z" fill="#38bdf8" />
+      <text x="22" y="12" font-size="11" font-weight="700" fill="#f1f5f9">Tailwind CSS</text>
+      <text x="165" y="12" font-size="9" fill="#38bdf8" text-anchor="end">Cyber UI</text>
+    </g>
+
+    <!-- Vite -->
+    <g transform="translate(14, 172)">
+      <path d="M 7 1 L 13 4 L 7 15 L 1 4 Z" fill="#bd34fe" />
+      <text x="22" y="12" font-size="11" font-weight="700" fill="#f1f5f9">Vite</text>
+      <text x="165" y="12" font-size="9" fill="#bd34fe" text-anchor="end">Bundler</text>
+    </g>
+
+    <!-- HTML5 & Canvas -->
+    <g transform="translate(14, 212)">
+      <path d="M 2 1 L 12 1 L 11 13 L 7 15 L 3 13 Z" fill="#e34f26" />
+      <text x="22" y="12" font-size="11" font-weight="700" fill="#f1f5f9">HTML5 Canvas</text>
+      <text x="165" y="12" font-size="9" fill="#e34f26" text-anchor="end">Render</text>
+    </g>
+  </g>
+
+  <!-- COLUMN 3: IOT & PARALLEL COMPUTING -->
+  <g transform="translate(455, 75)" class="card-glow">
+    <rect x="0" y="0" width="195" height="265" rx="12" fill="#0b1329" stroke="#10b981" stroke-width="1.2" />
+    
+    <path d="M 0 12 Q 0 0 12 0 L 183 0 Q 195 0 195 12 L 195 38 L 0 38 Z" fill="#0f172a" />
+    <line x1="0" y1="38" x2="195" y2="38" stroke="#10b981" stroke-width="1" />
+    
+    <!-- Chip Icon -->
+    <rect x="12" y="13" width="12" height="12" fill="#10b981" rx="2" />
+    <line x1="10" y1="16" x2="8" y2="16" stroke="#10b981" stroke-width="2" />
+    <line x1="10" y1="22" x2="8" y2="22" stroke="#10b981" stroke-width="2" />
+    <line x1="24" y1="16" x2="26" y2="16" stroke="#10b981" stroke-width="2" />
+    <line x1="24" y1="22" x2="26" y2="22" stroke="#10b981" stroke-width="2" />
+    <text x="36" y="25" font-size="12" font-weight="800" fill="#10b981">IOT &amp; PARALLEL</text>
+
+    <!-- ESP32 -->
+    <g transform="translate(14, 52)">
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#0f172a" stroke="#10b981" stroke-width="1.5" />
+      <circle cx="7" cy="7" r="3" fill="#10b981" />
+      <text x="22" y="12" font-size="11" font-weight="700" fill="#f1f5f9">ESP32 DevKit</text>
+      <text x="165" y="12" font-size="9" fill="#10b981" text-anchor="end">Microctrl</text>
+    </g>
+
+    <!-- KY-003 Sensor -->
+    <g transform="translate(14, 92)">
+      <path d="M 2 7 L 12 7 M 7 2 L 7 12" stroke="#34d399" stroke-width="2" />
+      <text x="22" y="12" font-size="11" font-weight="700" fill="#f1f5f9">KY-003 Sensor</text>
+      <text x="165" y="12" font-size="9" fill="#34d399" text-anchor="end">Magnetic</text>
+    </g>
+
+    <!-- KY-027 Sensor -->
+    <g transform="translate(14, 132)">
+      <circle cx="7" cy="7" r="5" fill="#fde047" opacity="0.8" />
+      <text x="22" y="12" font-size="11" font-weight="700" fill="#f1f5f9">KY-027 Sensor</text>
+      <text x="165" y="12" font-size="9" fill="#fde047" text-anchor="end">Light Cup</text>
+    </g>
+
+    <!-- OpenMP / Parallel -->
+    <g transform="translate(14, 172)">
+      <path d="M 2 3 L 7 8 L 12 3 M 2 8 L 7 13 L 12 8" fill="none" stroke="#60a5fa" stroke-width="1.5" />
+      <text x="22" y="12" font-size="11" font-weight="700" fill="#f1f5f9">C Parallel</text>
+      <text x="165" y="12" font-size="9" fill="#60a5fa" text-anchor="end">Multi-Core</text>
+    </g>
+
+    <!-- Embedded C -->
+    <g transform="translate(14, 212)">
+      <rect x="0" y="2" width="14" height="10" rx="1" fill="#334155" />
+      <text x="22" y="12" font-size="11" font-weight="700" fill="#f1f5f9">Embedded C</text>
+      <text x="165" y="12" font-size="9" fill="#94a3b8" text-anchor="end">Firmware</text>
+    </g>
+  </g>
+
+  <!-- COLUMN 4: TOOLCHAIN & PROTOCOLS -->
+  <g transform="translate(665, 75)" class="card-glow">
+    <rect x="0" y="0" width="195" height="265" rx="12" fill="#0b1329" stroke="#a855f7" stroke-width="1.2" />
+    
+    <path d="M 0 12 Q 0 0 12 0 L 183 0 Q 195 0 195 12 L 195 38 L 0 38 Z" fill="#0f172a" />
+    <line x1="0" y1="38" x2="195" y2="38" stroke="#a855f7" stroke-width="1" />
+    
+    <!-- Wrench Tool Icon -->
+    <path d="M 22 13 L 26 17 L 17 26 L 13 22 Z M 22 13 Q 26 9 20 9" fill="none" stroke="#a855f7" stroke-width="1.8" />
+    <text x="36" y="25" font-size="12" font-weight="800" fill="#a855f7">TOOLS &amp; APIS</text>
+
+    <!-- Git & GitHub -->
+    <g transform="translate(14, 52)">
+      <circle cx="4" cy="4" r="2.5" fill="#f43f5e" />
+      <circle cx="10" cy="10" r="2.5" fill="#f43f5e" />
+      <line x1="4" y1="4" x2="10" y2="10" stroke="#f43f5e" stroke-width="1.5" />
+      <text x="22" y="12" font-size="11" font-weight="700" fill="#f1f5f9">Git &amp; GitHub</text>
+      <text x="165" y="12" font-size="9" fill="#f43f5e" text-anchor="end">CI/CD &amp; VCS</text>
+    </g>
+
+    <!-- OpenAlex API -->
+    <g transform="translate(14, 92)">
+      <circle cx="7" cy="7" r="5" fill="none" stroke="#00f2fe" stroke-width="1.5" />
+      <text x="22" y="12" font-size="11" font-weight="700" fill="#f1f5f9">OpenAlex API</text>
+      <text x="165" y="12" font-size="9" fill="#00f2fe" text-anchor="end">Data Mining</text>
+    </g>
+
+    <!-- Linux CLI -->
+    <g transform="translate(14, 132)">
+      <path d="M 2 4 L 6 7 L 2 10 M 7 10 L 12 10" fill="none" stroke="#fde047" stroke-width="1.5" />
+      <text x="22" y="12" font-size="11" font-weight="700" fill="#f1f5f9">Linux Shell</text>
+      <text x="165" y="12" font-size="9" fill="#fde047" text-anchor="end">Bash</text>
+    </g>
+
+    <!-- VS Code -->
+    <g transform="translate(14, 172)">
+      <path d="M 12 2 L 3 8 L 7 11 L 1 13 L 13 14 Z" fill="#0284c7" />
+      <text x="22" y="12" font-size="11" font-weight="700" fill="#f1f5f9">VS Code</text>
+      <text x="165" y="12" font-size="9" fill="#0284c7" text-anchor="end">Primary IDE</text>
+    </g>
+
+    <!-- Odoo / Excel Parser -->
+    <g transform="translate(14, 212)">
+      <rect x="0" y="1" width="14" height="12" rx="2" fill="#10b981" />
+      <text x="7" y="10" font-size="8" font-weight="900" fill="#fff" text-anchor="middle">X</text>
+      <text x="22" y="12" font-size="11" font-weight="700" fill="#f1f5f9">Odoo &amp; Excel</text>
+      <text x="165" y="12" font-size="9" fill="#10b981" text-anchor="end">Parser</text>
+    </g>
+  </g>
+</svg>
